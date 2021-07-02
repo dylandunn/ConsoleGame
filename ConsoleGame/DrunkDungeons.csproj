@@ -47,6 +47,7 @@
     <Compile Include="Hallways.cs" />
     <Compile Include="ItemLibray.cs" />
     <Compile Include="OpponentLibrary.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
