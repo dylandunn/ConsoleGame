@@ -8,5 +8,14 @@ namespace ConsoleGame
 {
     public class OpponentLibrary
     {
+        public string Name { get; set; }
+
+        public OpponentLibrary() { }
+
+        public OpponentLibrary(string name)
+        {
+            Name = name;
+        }
     }
+   
 }
