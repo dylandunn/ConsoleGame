@@ -12,7 +12,6 @@ namespace ConsoleGame
         public string Name { get; }
         public List<Items> Items { get; }
 
-
         public Player(int playerPoints, string name, List<Items> items)
         {
             PlayerPoints = playerPoints;
@@ -20,8 +19,8 @@ namespace ConsoleGame
             Items = items;
         }
 
-
     }
+
 }
 
 
