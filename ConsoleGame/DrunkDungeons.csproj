@@ -45,8 +45,8 @@
   <ItemGroup>
     <Compile Include="Events.cs" />
     <Compile Include="Hallways.cs" />
-    <Compile Include="ItemLibray.cs" />
-    <Compile Include="OpponentLibrary.cs" />
+    <Compile Include="Items.cs" />
+    <Compile Include="Opponents.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgramUI.cs" />
