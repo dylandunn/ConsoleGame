@@ -11,11 +11,13 @@ namespace ConsoleGame
     {
 
         public string TextPrompt { get; }
-       
-        public List<Item> Items { get; }
+
+        
+        public List<Items> Items { get; }
        
 
-        public Rooms( string textPrompt,  List<Item> items)
+        public Rooms( string textPrompt, List<Items> items)
+
         {
             TextPrompt = textPrompt;
            

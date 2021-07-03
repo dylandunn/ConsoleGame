@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace ConsoleGame
 {
-    public class Player
+    public class Opponents
     {
-        public int PlayerPoints { get; set; }
+        public int BossPoints { get; set; }
         public string Name { get; }
         public List<Items> Items { get; }
 
-        public Player(int playerPoints, string name, List<Items> items)
+
+        public Opponents(int bossPoints, string name, List<Items> items)
         {
-            PlayerPoints = playerPoints;
             Name = name;
             Items = items;
+            BossPoints = bossPoints;
         }
 
+
     }
-
 }
-
-
