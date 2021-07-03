@@ -9,43 +9,58 @@ namespace ConsoleGame
     // This is my change -Dylan
     public class ProgramUI
     {
-        public enum Item { item1, item2, item3, item4 };
-
-        public List<Item> inventory = new List<Item>();
 
 
-        public static Rooms bar = new Rooms(
-            "You have entered the bar\n" +
-            "Head NORTH or EAST",
-            new List<string> { "north", "east" });
+        //public enum Item { BrokenRumMug, SantasBelch, DudesBowlingBall, BeerGoggles, HolyHandGranade };
 
-        public static Rooms bar2 = new Rooms(
-            "You're trying to exit the bar but Jack Sparrow challeges you to a dual\n",
-            new List<string> { "north" },
-            new List<Item> { Item.item1 }
-            );
+        // public List<Item> inventory = new List<Item>();
 
-        // Bad Santa Enconter Room
-        //1. “Is Grandma Spry?
-        //2. “Boy did someone drop you on your head?”
-        //3. “That's Right I forgot to take my pill.”
-        //4. on death, pass out? “And don't worry about us. We'll be fine.Let's get the Hell out of here Marcus.”
-        public static Rooms room2 = new Rooms(
-            "You have now entered Room 2 \n" +
-            "Head NORTH or WEST",
-            new List<string> { "north", "west" },
-            new List<Item> { Item.item2 });
+        public static Items brokenRumMug = new Items("Broken Rum Mug", 25);
+        public static Items santasBelch = new Items("Santa's Belch", 75);
+        public static Items    fffff = new Items("" , );
+        public static Items    fffff = new Items("" , );
+        public static Items fffff = new Items("", );
 
-        // Frank the Tank Enconter Room
-        //1.On Defeat/Death ”We're going streaking!”
-        //2. “Fill it up again! Fill it up again! Once it hits your lips, it's so good! “
-        //3.“You tell anyone about this and I'll fucking kill you. I'm kidding, I'm kidding, we'll have him home by tonight.Okay, sweetie.”
-        //4.”Snoop! Snoop-a-loop!”
-        public static Rooms room3 = new Rooms(
-            "You have now entered Room 3 \n" +
-            "Head NORTH or EAST",
-            new List<string> { "north", "west" },
-        new List<Item> { Item.item3 });
+
+
+
+        public static Opponents jackSparrow = new Opponents(100, " Capt. Jack Sparrow", new List<Items> { brokenRumMug });
+
+
+
+
+       // public static Rooms bar = new Rooms(
+       //     "You have entered the bar\n" +
+       //     "Head NORTH or EAST",
+       //     new List<string> { "north", "east" });
+       //
+       // public static Rooms bar2 = new Rooms(
+       //     "You're trying to exit the bar but Jack Sparrow challeges you to a dual\n",
+       //     new List<string> { "north" },
+       //     new List<Item> { Item.BrokenRumMug }
+       //     );
+       //
+       // // Bad Santa Enconter Room
+       // //1. “Is Grandma Spry?
+       // //2. “Boy did someone drop you on your head?”
+       // //3. “That's Right I forgot to take my pill.”
+       // //4. on death, pass out? “And don't worry about us. We'll be fine.Let's get the Hell out of here Marcus.”
+       // public static Rooms room2 = new Rooms(
+       //     "You have now entered Room 2 \n" +
+       //     "Head NORTH or WEST",
+       //     new List<string> { "north", "west" },
+       //     new List<Item> { Item.SantasBelch });
+       //
+       // // Frank the Tank Enconter Room
+       // //1.On Defeat/Death ”We're going streaking!”
+       // //2. “Fill it up again! Fill it up again! Once it hits your lips, it's so good! “
+       // //3.“You tell anyone about this and I'll fucking kill you. I'm kidding, I'm kidding, we'll have him home by tonight.Okay, sweetie.”
+       // //4.”Snoop! Snoop-a-loop!”
+       // public static Rooms room3 = new Rooms(
+       //     "You have now entered Room 3 \n" +
+       //     "Head NORTH or EAST",
+       //     new List<string> { "north", "west" },
+       // new List<Item> { Item.DudesBowlingBall });
 
 
 
@@ -69,6 +84,8 @@ namespace ConsoleGame
                                         "Simple isn't it? \n");
             Console.WriteLine("Press ENTER to Continue");
             Console.Clear();
+
+            Console.Clear();        //intro text
             Console.WriteLine("You walk in from the alleyway after having a rough conversation with your spouse about Christmas Presents.\n" +
                               "You hear the bars of one bourbon, one scotch, one beer blairing out over the bars speakers. This means only one thing.\n" +
                               "it's 2 O'clock and last call for alcohol. The bar has become a blurry, sort of foggy, and the partrons all look like drunken movie character rejects.\n" +
@@ -77,15 +94,12 @@ namespace ConsoleGame
                               "You're good you figured and you told your spouse you'd be home by 12, they are not happy, it's time to head home.\n" +
                               "Type 1 and head NORTH, towards the EXIT.\n");
 
-            Console.Clear();        ///Collin text
-            Console.WriteLine("You've stumbled in front of the bar. ");
-
             bool alive = true;
             while (alive)
             {
-                ///// Intro Screen Will Go Here
+ 
 
-                Console.Clear();        ///Collin text
+                Console.Clear();        //Navigation and story text
                 Console.WriteLine("You have stumbled in front of the bar \n" +
                     "Which direction would you like to go? \n" +
                     "1. North\n" +
@@ -96,7 +110,7 @@ namespace ConsoleGame
                 switch (input)
                 {
                     case "1":
-                        Console.Clear();        ///Collin text
+                        Console.Clear();        //Jack Sparrow Text
                         Console.WriteLine("You reached a door, but you incounter Jack Sparrow and he's ready to fight"); ;
                         break;
                        
@@ -134,10 +148,10 @@ namespace ConsoleGame
                 }
 
                 Console.Clear();
-                                            //Collin Text but make sure you keep in the string interpolation
-                Console.WriteLine($"You have defeated Jack Sparrow! He dropped an {Item.item1} and it has been added to your inventory!");
+                                            //Colin Text but make sure you keep in the string interpolation
+                Console.WriteLine($"You have defeated Jack Sparrow! He dropped an {Item.BrokenRumMug} and it has been added to your inventory!");
                 //Item names can also be changed, just make sure they're changed in every occurence
-                inventory.Add(Item.item1);
+                inventory.Add(Item.BrokenRumMug);
 
                 Console.Clear();
 
@@ -151,8 +165,8 @@ namespace ConsoleGame
                 {
                     case "1":
                         Console.Clear();
-                        Console.WriteLine($"You have summond the power of {Item.item2} and it has been added to your inventory!");
-                        inventory.Add(Item.item2);
+                        Console.WriteLine($"You have summond the power of {Item.SantasBelch} and it has been added to your inventory!");
+                        inventory.Add(Item.SantasBelch);
                         
                         break;
                     case "2":
@@ -167,7 +181,7 @@ namespace ConsoleGame
                 if (foundItem==false)
                 {
                     Console.WriteLine($"Choose an attack!\n" +
-                        $"1.{Item.item1}\n" +
+                        $"1.{Item.BrokenRumMug}\n" +
                         $"2. Punch");
                 }
 
