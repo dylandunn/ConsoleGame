@@ -13,13 +13,11 @@ namespace ConsoleGame
 
         // public string ITEMSNAME here
         //{
-            //get {return ITEMSNAME; }
-            //set {ITEMSNAME = value; }
+        //get {return ITEMSNAME; }
+        //set {ITEMSNAME = value; }
         //}
-        {
-            public class Player
-        {
-            private Player _player;
+
+       
         }
-    }
+    
 }
