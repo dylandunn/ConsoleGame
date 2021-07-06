@@ -22,3 +22,11 @@ namespace ConsoleGame
         }
     }
 }   
+
+
+//Player call  ADD Item when needed where needed, fights
+
+
+//opponent.Items.Remove(brokenRumMug);
+//player.Items.Add(brokenRumMug);
+
