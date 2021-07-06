@@ -9,8 +9,13 @@ namespace ConsoleGame
     public class Player
     {
         public int PlayerPoints { get; set; }
-        public string Name { get; }
+        public string Name { get; set; }
         public List<Items> Items { get; }
+
+        public Player()
+        {
+
+        }
 
         public Player(int playerPoints, string name, List<Items> items)
         {
